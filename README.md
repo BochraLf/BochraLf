@@ -2,7 +2,7 @@
 
 
 <div id="header" align="center">
-  <img src="[https://giphy.com/stickers/code-like-a-girl-staart-grupo-primo-xCJ6CBmBLIm7DZ3jL7](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODEzNjgzZGU4MDhiZDZhMGJlMTU1NGU4MWIxMTA4YTk3N2VkYWUxNCZjdD1z/QLzImGMAHffcJ2Xl4I/giphy.gif)" width="100"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODEzNjgzZGU4MDhiZDZhMGJlMTU1NGU4MWIxMTA4YTk3N2VkYWUxNCZjdD1z/QLzImGMAHffcJ2Xl4I/giphy.gif" width="100"/>
 </div>
 
 - 🔭 I’m currently working on ...
