@@ -7,7 +7,7 @@
 You re in a new coder's github, so be carefull you might see something dangerous (or just totally wrong but trust me it works xD)
 
  I’m currently working on developping my skills, and learning new programming languages.
- I am a data science student who always have fun while learning or working on something related to new technologies, Algorithms and ofc statistics. ❣️
+ I am a data science student who always have fun while learning or working on something related to new technologies, Algorithms and ofc maths. ❣️
  
 
  📱 You can find me on :
