@@ -27,5 +27,4 @@ You re in a new coder's github, so be carefull you might see something dangerous
   </a>
 </div>
 
-- 😆 if you cant handle it, just drop database if exists..
 
