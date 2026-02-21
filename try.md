@@ -1,10 +1,6 @@
 # Agent Zork 
 
-An AI agent designed to play text-based adventure games (e.g., Zork, Lost Pig) using a hybrid architecture combining:**FastMCP** ,**Qwen2.5-72B** and **Jericho API** 
-
-# Progressive Improvements
-
----
+An AI agent designed to play text-based adventure games (e.g., Zork, Lost Pig) using a hybrid architecture combining:**FastMCP** ,**Qwen2.5-72B** and **Jericho API**. Presenting the progressive Improvements i did: 
 
 ## 🔹 Solution 0 — Baseline
 
@@ -29,7 +25,7 @@ Locations: 25
 
 Baseline reference.
 
----
+
 
 ## 🔹 Solution 1 — Improved Single Agent
 
@@ -50,7 +46,7 @@ Locations: 37
 ✔ Good exploration 
 ✖ Lower score
 
----
+
 
 ## 🔹 Solution 2 — Agent + Rewritten Server
 
@@ -73,7 +69,7 @@ Locations: 15
 
 ⚠ Exploration regressed
 
----
+
 
 ## 🔹 Solution 3 — Game-Specific Hints
 
@@ -94,7 +90,6 @@ Locations: 26
 ✔ Score improved  
 ✖ Exploration limited
 
----
 
 ## 🔹 Solution 4 — Stricter Loop Detection
 
@@ -115,7 +110,7 @@ Locations: 29
 
 ✔ Best balance between score and exploration (so far)
 
----
+
 
 ## 🔹 Solution 5 — Map Injection Strategy
 
@@ -135,7 +130,7 @@ Locations: 14
 
 ⚠ Map injection ineffective
 
----
+
 
 ## 🔹 Solution 6 — Deterministic Navigation (Reduced LLM)
 
@@ -162,7 +157,7 @@ Locations: 27
 
 ⚠ Reducing LLM did not improve results
 
----
+
 
 ## 🔹 Solution 7 — Jericho API Integration
 
@@ -184,7 +179,19 @@ Locations: 20
 
 ⚠ Jericho alone was insufficient
 
----
+## Summary of Results
+
+| Solution | Score | Moves | Locations | Notes |
+|----------|--------|--------|------------|-------|
+| Sol 0 | 2 | 96 | 25 | Baseline |
+| Sol 1 | 1 | 99 | 37 | Best exploration |
+| Sol 2 | 1 | 96 | 15 | Regression |
+| Sol 3 | 2 | 99 | 26 | Hints added |
+| Sol 4 | 2 | 100 | 29 | Best balance |
+| Sol 5 | 2 | 95 | 14 | Map ineffective |
+| Sol 6 | 1 | 100 | 27 | Deterministic |
+| Sol 7 | 1 | 99 | 20 | Jericho API |
+
 
 ## 🏆 Solution 8 — Final Hybrid Architecture
 
@@ -236,6 +243,7 @@ ROOM_FORCED_ACTIONS = {
     "Fountain Room": ["examine bowl", "take coin"],
     "Hole": ["take torch"],
 }
+```
 
 Ensures scoring actions are executed immediately upon entering specific rooms.
 
@@ -284,12 +292,10 @@ if action in DIRS and new_location != self.current_location:
 
 Builds the map dynamically.
 
-Final Results
-
-After deterministic forced-action integration:
-
+**Final Results!!** After deterministic forced-action integration:
+🎆🎆🎆🎆🎆🎆🎆🎆🎆
 Score: 2
 Moves: 98
 Locations: 61
-
+🎆🎆🎆🎆🎆🎆🎆🎆🎆
 END. Bochra LAFIFI
