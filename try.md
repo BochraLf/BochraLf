@@ -1,36 +1,8 @@
-# 🧠 Agent Zork — MCP + LLM Hybrid Architecture
+# Agent Zork 
 
-An AI agent designed to play text-based adventure games (e.g., Zork, Lost Pig) using a hybrid architecture combining:
+An AI agent designed to play text-based adventure games (e.g., Zork, Lost Pig) using a hybrid architecture combining:**FastMCP** ,**Qwen2.5-72B** and **Jericho API** 
 
-- **FastMCP** (agent-server communication)
-- **Qwen2.5-72B** (LLM reasoning)
-- **Jericho API** (game state extraction and valid actions)
-
----
-
-## 📌 Project Objective
-
-Build an intelligent agent capable of:
-
-- Efficient exploration
-- Scoring points
-- Avoiding repetitive loops
-- Constructing an internal map
-- Operating within **100 steps maximum**
-
----
-
-## 📊 Evaluation Metrics
-
-Each run is evaluated using:
-
-- **Final Score**
-- **Number of Moves**
-- **Number of Unique Locations Visited**
-
----
-
-# 🚀 Progressive Improvements
+# Progressive Improvements
 
 ---
 
@@ -75,7 +47,7 @@ Moves: 99
 Locations: 37
 
 
-✔ Best exploration so far  
+✔ Good exploration 
 ✖ Lower score
 
 ---
@@ -214,7 +186,7 @@ Locations: 20
 
 ---
 
-# 🏆 Solution 8 — Final Hybrid Architecture
+## 🏆 Solution 8 — Final Hybrid Architecture
 
 ### Concept
 
@@ -223,7 +195,7 @@ Locations: 20
 
 ---
 
-## 🧩 Two-Phase Strategy
+##  Two-Phase Strategy
 
 ### Phase 1 — Interact First
 
@@ -238,7 +210,7 @@ Try all exits systematically.
 
 ---
 
-# 🎯 Targeted Deterministic Fix
+#  Targeted Deterministic Fix
 
 Problem observed:
 
@@ -251,11 +223,11 @@ Introduce hardcoded forced actions.
 
 ---
 
-# ⚙️ Final Architecture Details
+# Final Architecture Details (Sol.08) 
 
 ---
 
-## 📄 agent.py
+## agent.py
 
 ### ROOM_FORCED_ACTIONS
 
@@ -284,7 +256,7 @@ Tracks which directions were attempted per room.
 
 Major reason behind improved exploration.
 
-📄 mcp_server.py
+ mcp_server.py
 get_state()
 
 Returns structured JSON:
@@ -298,7 +270,7 @@ Returns structured JSON:
     "valid_actions": ...
 }
 
-Key improvements:
+improvements done:
 
 location_id ensures accurate room tracking
 
@@ -312,7 +284,7 @@ if action in DIRS and new_location != self.current_location:
 
 Builds the map dynamically.
 
-📈 Final Results
+Final Results
 
 After deterministic forced-action integration:
 
@@ -320,7 +292,4 @@ Score: 2
 Moves: 98
 Locations: 61
 
-🏆 Best exploration achieved
-✔ Maintained score
-✔ Clean hybrid deterministic + LLM system
-✔ Structured server-agent separation
+END. Bochra LAFIFI
