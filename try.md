@@ -286,9 +286,9 @@ Returns structured JSON:
 
 ### improvements done:
 
-- location_id ensures accurate room tracking
+- `location_id` ensures accurate room tracking
 
-- valid_actions from Jericho provides full action space
+- `valid_actions` from Jericho provides full action space
 
 - Objects extracted for interaction prioritization
 
@@ -304,10 +304,15 @@ Builds the map dynamically.
 
 
 🎆🎆🎆🎆🎆🎆🎆🎆🎆
+
+
 - Score: 2
 - Moves: 98
 - Locations: 61
+
+  
 🎆🎆🎆🎆🎆🎆🎆🎆🎆
+
 
 
 END. Bochra LAFIFI
