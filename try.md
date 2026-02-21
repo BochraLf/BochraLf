@@ -200,7 +200,7 @@ Locations: 20
 **Server:** Based on Solution 6  
 **Agent:** Fusion of Solution 1 + Solution 4
 
----
+
 
 ##  Two-Phase Strategy
 
@@ -215,7 +215,7 @@ When entering a new room:
 
 Try all exits systematically.
 
----
+
 
 #  Targeted Deterministic Fix
 
@@ -228,11 +228,9 @@ Problem observed:
 
 Introduce hardcoded forced actions.
 
----
+
 
 # Final Architecture Details (Sol.08) 
-
----
 
 ## agent.py
 
@@ -247,28 +245,35 @@ ROOM_FORCED_ACTIONS = {
 
 Ensures scoring actions are executed immediately upon entering specific rooms.
 
-Forced Action Tracking
+### Forced Action Tracking
+```python
 self.forced_done: set[str] = set()
+
+```
 
 Prevents repeating forced actions.
 
-Strict Loop Detection
+### Strict Loop Detection
+```python
 if action in self.recent_actions[-2:]:
+
+```
 
 Cuts loops earlier than baseline.
 
-Exit Tracking
+### Exit Tracking
+```python
 self.room_exits_tried: dict[str, set[str]] = {}
 
-Tracks which directions were attempted per room.
+```
 
-Major reason behind improved exploration.
+Tracks which directions were attempted per room, and major reason behind improved exploration.
 
- mcp_server.py
-get_state()
+## mcp_server.py
+### get_state()
 
 Returns structured JSON:
-
+```json
 {
     "location_name": ...,
     "location_id": ...,
@@ -277,25 +282,32 @@ Returns structured JSON:
     "objects": ...,
     "valid_actions": ...
 }
+```
 
-improvements done:
+### improvements done:
 
-location_id ensures accurate room tracking
+- location_id ensures accurate room tracking
 
-valid_actions from Jericho provides full action space
+- valid_actions from Jericho provides full action space
 
-Objects extracted for interaction prioritization
+- Objects extracted for interaction prioritization
 
-Automatic Exit Graph Construction
+### Automatic Exit Graph Construction
+```python
 if action in DIRS and new_location != self.current_location:
     self.room_exits[self.current_location][action] = new_location
+```
 
 Builds the map dynamically.
 
 **Final Results!!** After deterministic forced-action integration:
+
+
 🎆🎆🎆🎆🎆🎆🎆🎆🎆
-Score: 2
-Moves: 98
-Locations: 61
+- Score: 2
+- Moves: 98
+- Locations: 61
 🎆🎆🎆🎆🎆🎆🎆🎆🎆
+
+
 END. Bochra LAFIFI
